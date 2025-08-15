@@ -1,33 +1,68 @@
-# Hospital Readmission Rate Prediction for Diabetes Patients
-
-## 📌 Overview  
-This project predicts **hospital readmission rates** for diabetes patients using machine learning techniques.  
-It includes **data preprocessing, exploratory data analysis, feature engineering, and predictive modeling** to classify patients at high risk of readmission.  
+## 📌 Overview
+This project investigates the **impact of hospital management practices for hyperglycemia** on patient readmission rates using **machine learning models**.  
+It applies various **data preprocessing, feature extraction, and predictive modeling techniques** to discover patterns and relationships in hospital readmission data.
 
 ---
 
-## 📂 Dataset  
-This project uses the **Diabetes 130-US Hospitals for Years 1999–2008** dataset from the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/diabetes+130-us+hospitals+for+years+1999-2008).  
-It contains over **10 years of clinical records** from 130 U.S. hospitals and integrated delivery networks, focusing on inpatients with diabetes.  
-
-**Key facts:**  
-- **Instances:** 101,766  
-- **Features:** 50 (including demographics, diagnoses, lab results, medications, and hospital stay details)  
-- **Target:** Readmission status (within 30 days, after 30 days, or no readmission)  
-- **License:** CC BY 4.0 (attribution required)  
-- **Citation:**  
-  > Strack, B., DeShazo, J.P., Gennings, C., et al. (2014). *Diabetes 130-US Hospitals for Years 1999–2008*. UCI Machine Learning Repository. https://doi.org/10.24432/C5230J  
+## 🎯 Objectives
+- Identify factors in hospital management systems that influence **readmission rates** for hyperglycemia patients.
+- Apply **machine learning models** to predict readmissions.
+- Address **class imbalance** in healthcare datasets.
 
 ---
 
-## 🧾 Description  
-The workflow involves:  
-- Loading and preprocessing the dataset.  
-- Performing **exploratory data analysis (EDA)** to understand feature distributions.  
-- Applying **feature extraction** and **encoding** for categorical variables.  
-- Handling class imbalance using **SMOTE**.  
-- Using **GridSearchCV** and **cross-validation** to optimize model parameters.  
-- Evaluating models with **accuracy** and **ROC-AUC** scores.  
+## 📂 Dataset
+- **Source:** [UC Irvine Machine Learning Repository – Diabetes 130-US hospitals dataset](https://archive.ics.uci.edu/ml/datasets/Diabetes+130-US+hospitals+for+years+1999-2008)
+- **Size:** 101,766 records of diabetic patients from 130 U.S. hospitals.
+- **Features:** 50 attributes including demographics, diagnoses, lab results, and medications.
+- **Target Variable:** Readmission status (`<30 days`, `>30 days`, `No`).
 
 ---
 
+## 🛠 Methodology
+- **Data Preprocessing:**
+  - Cleaning missing values.
+  - Encoding categorical features.
+  - Normalizing numerical variables.
+- **Feature Engineering:**
+  - Feature selection to retain significant predictors.
+  - Transformation of diagnosis codes.
+- **Modeling Approach:**
+  - Decision Trees
+  - Random Forest
+  - Logistic Regression
+  - Support Vector Machines
+- **Class Imbalance Handling:** SMOTE (Synthetic Minority Over-sampling Technique)
+- **Hyperparameter Tuning:** GridSearchCV and Cross-validation.
+
+---
+
+## 📊 Experimental Results
+- **Best Performing Model:** Random Forest
+- **Performance Metrics:** Accuracy, Precision, Recall, F1-score, ROC-AUC
+- Models using **balanced datasets** via SMOTE improved recall significantly for minority classes.
+- **Top Predictors:** Number of inpatient visits, insulin usage, length of stay.
+
+---
+
+## 📈 Key Insights
+- Effective **hospital management strategies** can lower readmission rates for hyperglycemia patients.
+- **Machine learning** can help identify high-risk patients early.
+- Balancing the dataset plays a crucial role in improving prediction for rare readmissions.
+
+---
+
+## 📚 Technologies Used
+- Python  
+- Pandas  
+- NumPy  
+- Scikit-learn  
+- Matplotlib / Seaborn  
+
+---
+
+## 🚀 How to Run
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/username/hyperglycemia-readmission-analysis.git
+   cd hyperglycemia-readmission-analysis
